@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images2/Earthgrid-logo.png" type="image/png">
+    <title>Environmental Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .ask {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Environmental Survey</h1>
+
+    <form id="surveyForm">
+        <div class="ask">
+            <label for="name" id="n">What's your name?</label>
+            <input type="text" id="name" placeholder="Enter your name here" required />
+        </div>
+
+        <!-- Questions -->
+        <div class="question-container">
+            <div class="ask">
+                <label>1) What is the minimum distance of travel for which you use your motorcycle/car?</label>
+                <input type="radio" name="question1" value="1"> 0.5 km<br>
+                <input type="radio" name="question1" value="2"> 1 km<br>
+                <input type="radio" name="question1" value="3"> 1.5 km<br>
+                <input type="radio" name="question1" value="4"> 2 km
+            </div>
+
+            <div class="ask">
+                <label>2) How often do you use public transportation?</label>
+                <input type="radio" name="question2" value="1"> Never<br>
+                <input type="radio" name="question2" value="2"> Rarely<br>
+                <input type="radio" name="question2" value="3"> Sometimes<br>
+                <input type="radio" name="question2" value="4"> Always
+            </div>
+
+            <div class="ask">
+                <label>3) Do you recycle plastic and paper waste?</label>
+                <input type="radio" name="question3" value="1"> Never<br>
+                <input type="radio" name="question3" value="2"> Sometimes<br>
+                <input type="radio" name="question3" value="3"> Often<br>
+                <input type="radio" name="question3" value="4"> Always
+            </div>
+
+            <div class="ask">
+                <label>4) How often do you use energy-saving bulbs?</label>
+                <input type="radio" name="question4" value="1"> Never<br>
+                <input type="radio" name="question4" value="2"> Sometimes<br>
+                <input type="radio" name="question4" value="3"> Often<br>
+                <input type="radio" name="question4" value="4"> Always
+            </div>
+
+            <div class="ask">
+                <label>5) How frequently do you participate in environmental initiatives?</label>
+                <input type="radio" name="question5" value="1"> Never<br>
+                <input type="radio" name="question5" value="2"> Rarely<br>
+                <input type="radio" name="question5" value="3"> Occasionally<br>
+                <input type="radio" name="question5" value="4"> Frequently
+            </div>
+
+            <div class="ask">
+                <label>6) Do you compost your organic waste?</label>
+                <input type="radio" name="question6" value="1"> Never<br>
+                <input type="radio" name="question6" value="2"> Sometimes<br>
+                <input type="radio" name="question6" value="3"> Often<br>
+                <input type="radio" name="question6" value="4"> Always
+            </div>
+
+            <div class="ask">
+                <label>7) How often do you walk or cycle instead of using motorized transportation?</label>
+                <input type="radio" name="question7" value="1"> Never<br>
+                <input type="radio" name="question7" value="2"> Rarely<br>
+                <input type="radio" name="question7" value="3"> Sometimes<br>
+                <input type="radio" name="question7" value="4"> Frequently
+            </div>
+
+            <div class="ask">
+                <label>8) Do you limit your water usage at home?</label>
+                <input type="radio" name="question8" value="1"> Never<br>
+                <input type="radio" name="question8" value="2"> Sometimes<br>
+                <input type="radio" name="question8" value="3"> Often<br>
+                <input type="radio" name="question8" value="4"> Always
+            </div>
+
+            <div class="ask">
+                <label>9) How much effort do you make to reduce your carbon footprint?</label>
+                <input type="radio" name="question9" value="1"> None<br>
+                <input type="radio" name="question9" value="2"> A little<br>
+                <input type="radio" name="question9" value="3"> Some<br>
+                <input type="radio" name="question9" value="4"> A lot
+            </div>
+
+            <div class="ask">
+                <label>10) How actively do you educate others about environmental issues?</label>
+                <input type="radio" name="question10" value="1"> Never<br>
+                <input type="radio" name="question10" value="2"> Sometimes<br>
+                <input type="radio" name="question10" value="3"> Often<br>
+                <input type="radio" name="question10" value="4"> Always
+            </div>
+        </div>
+
+        <div class="ask fb">
+            <label>Share your thoughts, experiences, and suggestions:</label>
+            <textarea name="feedback" id="feedback" placeholder="Share your story here..."></textarea>
+        </div>
+
+        <input type="submit" value="Submit your response">
+    </form>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting the default way
+
+            let total = 0;
+            let answeredAll = true;
+
+            // Loop through all 10 questions
+            for (let i = 1; i <= 10; i++) {
+                const selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
+
+                if (selectedOption) {
+                    total += parseInt(selectedOption.value);
+                } else {
+                    answeredAll = false;
+                }
+            }
+
+            if (!answeredAll) {
+                alert('Please answer all the questions to submit the form.');
+                return;
+            }
+
+            // Navigate to the appropriate page based on the total score
+            if (total < 14) {
+                window.location.href = 'bad.html';
+            } else if (total >= 15 && total <= 25) {
+                window.location.href = 'ok.html';
+            } else if (total >= 26 && total <= 36) {
+                window.location.href = 'good.html';
+            } else if (total >= 37 && total <= 40) {
+                window.location.href = 'perfect.html';
+            }
+        });
+    </script>
+</body>
+</html>
